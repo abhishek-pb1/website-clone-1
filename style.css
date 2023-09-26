@@ -115,7 +115,7 @@ h1 {
   font-weight: var(--black);
   text-transform: uppercase;
   line-height: 0.9;
-  position: relative;
+  /* position: relative; */
   z-index: 10;
 }
 
@@ -156,9 +156,11 @@ h1 {
 .scrolling-section {
   height: 100vh;
   width: 100%;
-  margin: 2rem auto;
+  padding: 5rem 0;
   display: flex;
+  align-items: flex-start;
   white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .scrolling-section h1 {
@@ -166,10 +168,11 @@ h1 {
   /* font-size: 2rem; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   -webkit-text-stroke: 2px var(--light-color);
-  animation: scroll 10s linear none infinite;
+  animation: scroll 10s 0.1s linear none infinite;
 }
 
 .scrolling-section h1:hover {
+  /* display: inline; */
   color: var(--accent-color);
   -webkit-text-stroke: 2px var(--accent-color);
   transition: all 0.2s ease-in;
@@ -193,7 +196,7 @@ h1 {
 .cursor-blur {
   height: 300px;
   width: 300px;
-  filter: blur(300px);
+  filter: blur(30px);
   opacity: 30%;
 }
 /* --------------- */
