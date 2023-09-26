@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+:root {
+  --accent-color: #a4d421;
+  --dark-color: #000;
+  --light-color: #fff;
+
+  --thin: 100;
+  --medium: 500;
+  --semi-bold: 600;
+  --black: 900;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+/* Navbar */
+nav img {
+  max-width: 80px;
+}
+
+nav {
+  height: 9rem;
+  width: 100%;
+  /* background-color: var(--accent-color); */
+  position: fixed;
+  z-index: 100;
+}
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  align-items: center;
+  height: 100%;
+}
+
+nav a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: var(--medium);
+}
+
+/* Video */
+video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+/* Main section - just to give it a black tint all over */
+main {
+  /* position: relative; */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-section {
+  padding-top: 5rem;
+  height: 100vh;
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+h1 {
+  font-size: 9rem;
+  font-weight: var(--black);
+  text-transform: uppercase;
+  line-height: 0.9;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section h1 {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section h1::before {
+  content: "Eat. Drink. Play.";
+  position: absolute;
+  color: var(--dark-color);
+  top: -4px;
+  left: -8px;
+  z-index: -1;
+  -webkit-text-stroke: 2px var(--accent-color);
+}
+
+.hero-section h3 {
+  font-size: 2rem;
+  font-weight: var(--black);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 45rem;
+  margin: auto;
+  font-weight: var(--medium);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Scrolling section */
+
+.scrolling-section {
+  height: 100vh;
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  white-space: nowrap;
+}
+
+.scrolling-section h1 {
+  color: rgba(0, 0, 0, 0);
+  /* font-size: 2rem; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-text-stroke: 2px var(--light-color);
+  animation: scroll 10s linear none infinite;
+}
+
+.scrolling-section h1:hover {
+  color: var(--accent-color);
+  -webkit-text-stroke: 2px var(--accent-color);
+  transition: all 0.2s ease-in;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* ----------------------- */
+/* Cursor */
+.cursor {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  position: fixed;
+}
+
+.cursor-blur {
+  height: 300px;
+  width: 300px;
+  filter: blur(300px);
+  opacity: 30%;
+}
+/* --------------- */
+/* .hero-content-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.hero-content-wrapper .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content-wrapper h1 {
+  font-size: 9rem;
+  font-weight: var(--black);
+  text-transform: uppercase;
+  line-height: 0.9;
+  position: relative;
+}
+
+.hero-content-wrapper h1::before {
+  content: "Eat. Drink. Play.";
+  position: absolute;
+  color: var(--dark-color);
+  top: -5px;
+  left: -8px;
+  z-index: -1;
+  -webkit-text-stroke: 1px var(--accent-color);
+}
+
+.hero-content-wrapper h3 {
+  font-size: 2rem;
+  font-weight: var(--black);
+  margin: 1rem 0;
+}
+
+.hero-content-wrapper p {
+  font-size: 1.2rem;
+  font-weight: var(--thin);
+}
+
+/* ------------------ */
+
+/* .cursor-wrapper {
+  height: 100vh;
+  width: 100%;
+} */
