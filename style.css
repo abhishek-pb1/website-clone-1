@@ -84,7 +84,6 @@ nav img {
 nav {
   height: 9rem;
   width: 100%;
-  /* background-color: var(--accent-color); */
   position: fixed;
   z-index: 100;
 }
@@ -204,7 +203,10 @@ main {
 }
 /* --------------- */
 /* About Us */
-
+.about-us {
+  position: relative;
+  z-index: 10;
+}
 .about-us .container {
   display: flex;
   justify-content: space-between;
@@ -219,7 +221,37 @@ main {
 }
 
 .about-us p {
-  /* text-align: center; */
   max-width: 80%;
   margin: 2rem auto;
+}
+
+/* Cards section */
+
+.cards-section {
+  margin: 5rem auto;
+}
+
+.cards-section .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.cards-section img {
+  max-width: 30%;
+  min-height: 700px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.cards-section .dots {
+  min-height: 50px;
+  position: absolute;
+  max-width: 200px;
+  top: -50px;
+  left: -20px;
+  z-index: -1;
 }
