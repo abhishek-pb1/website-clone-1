@@ -70,6 +70,13 @@ h3 {
   font-weight: var(--black);
 }
 
+h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: var(--black);
+  line-height: 1.7;
+}
+
 p {
   font-size: 1.2rem;
   line-height: 1.9;
@@ -242,15 +249,18 @@ main {
 
 .card-container {
   max-width: 30%;
-  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
   min-height: 600px;
   border-radius: 1rem;
-  /* padding: 1rem; */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.card-container:nth-child(1) {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
 }
 
 .card-container:nth-child(2) {
@@ -279,7 +289,7 @@ main {
   z-index: 10;
 }
 
-.card-text-hover {
+.overlay {
   opacity: 0%;
   background-color: var(--accent-color);
   color: var(--dark-color);
@@ -294,7 +304,11 @@ main {
   place-content: center;
 }
 
-.card-text-hover:hover {
+.card-container:hover {
+  transform: perspective(3000px) rotateY(10deg);
+}
+
+.card-container:hover .overlay {
   opacity: 100%;
 }
 
@@ -327,4 +341,32 @@ main {
 }
 .round-link:hover > i {
   color: var(--accent-color);
+}
+
+/* Signup */
+.signup {
+  background: linear-gradient(to right top, #b1e523, #069c3c);
+  color: var(--dark-color);
+  /* padding: 5rem 0; */
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup h4 {
+  color: var(--dark-color);
+  transition: all 1s ease-in;
+  max-width: 60%;
+  margin: auto;
+}
+
+.signup h4:hover {
+  text-decoration: underline;
+}
+
+.signup img {
+  display: inline-block;
+  max-width: 8rem;
 }
