@@ -9,6 +9,22 @@ document.addEventListener("mousemove", (event) => {
   cursorBlur.style.top = event.y - 150 + "px";
 });
 
+var allNavLinks = document.querySelectorAll("nav a");
+
+allNavLinks.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    cursor.style.scale = 2;
+    cursor.style.border = "1px solid white";
+    cursor.style.backgroundColor = "transparent";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    cursor.style.scale = 1;
+    cursor.style.border = "none";
+    cursor.style.backgroundColor = "#a4d421";
+  });
+});
+
 gsap.to("nav", {
   backgroundColor: "#000",
   duration: 0.5,
