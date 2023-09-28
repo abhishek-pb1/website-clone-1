@@ -82,6 +82,18 @@ p {
   line-height: 1.9;
   font-weight: 400;
 }
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 3rem;
+  border: 2px solid var(--accent-color);
+  background-color: rgba(0, 0, 0, 0);
+  margin: 2rem auto;
+}
 /* ----------------- */
 /* Navbar */
 nav img {
@@ -369,4 +381,105 @@ main {
 .signup img {
   display: inline-block;
   max-width: 8rem;
+}
+
+/* Food */
+/* - Slider */
+
+.food {
+  padding: 5rem 0;
+  margin-top: 3rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 50%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 1rem;
+}
+
+.slider img {
+  scroll-snap-align: start;
+  flex: 1 0 100%;
+  /* flex : grow shrink basis */
+  /* object-fit: cover; */
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-nav a {
+  display: inline-block;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-color: var(--light-color);
+  transition: all 0.2s ease-in;
+}
+
+.slider-nav a:hover {
+  background-color: var(--accent-color);
+}
+
+.slider-nav a:target {
+  background-color: red;
+}
+
+/* -Text */
+
+.food .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 5rem;
+}
+
+.food .text-content h3,
+.food .text-content p {
+  margin: 2rem auto;
+}
+
+/* Reviews Section */
+.reviews > .container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews img {
+  max-width: 60px;
+}
+
+.reviews h4 {
+  max-width: 70%;
+  text-align: center;
+}
+
+.reviews #left-quote,
+.reviews #right-quote {
+  position: absolute;
+}
+
+.reviews #right-quote {
+  right: 7rem;
+  bottom: 10rem;
+}
+
+.reviews #left-quote {
+  left: 7rem;
+  top: 10rem;
 }
