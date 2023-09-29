@@ -50,3 +50,69 @@ gsap.to("main", {
     scrub: 2,
   },
 });
+
+// About us animation
+gsap.from(".about-us img, .about-us-text", {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".about-us",
+    scroller: "body",
+    start: "top 70%",
+    end: "top 65%",
+    scrub: 1,
+  },
+});
+
+// cards animation
+gsap.from(".card-container", {
+  scale: 0.8,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".card-container",
+    scroller: "body",
+    start: "top 70%",
+    end: "top 65%",
+    scrub: 1,
+  },
+});
+
+// Quotes animation
+gsap.from("#left-quote", {
+  y: -70,
+  x: -70,
+  scrollTrigger: {
+    trigger: "#left-quote",
+    scoller: "body",
+    start: "top 55%",
+    end: "top 45%",
+    scrub: 4,
+  },
+});
+
+gsap.from("#right-quote", {
+  y: 70,
+  x: 70,
+  scrollTrigger: {
+    trigger: "#right-quote",
+    scoller: "body",
+    start: "top 99%",
+    end: "top 45%",
+    scrub: 4,
+  },
+});
+
+gsap.from(".small-card-outline-text", {
+  y: 50,
+  scrollTrigger: {
+    trigger: ".small-card-outline-text",
+    scoller: "body",
+    start: "top 75%",
+    end: "top 70%",
+    scrub: 3,
+  },
+});

@@ -1,0 +1,3 @@
+- make it mobile responsive
+- make the footer using grid instead of flexbox (be comfortable with grid)
+- try using javascript for the animations instead of gsap
